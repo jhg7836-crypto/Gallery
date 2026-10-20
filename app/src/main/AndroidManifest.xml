@@ -162,12 +162,7 @@
             android:exported="false"
             android:theme="@style/TranslucentTheme" />
 
-        <activity
-            android:name=".activities.VideoPlayerActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="false"
-            android:parentActivityName=".activities.MediaActivity"
-            android:theme="@style/TranslucentTheme" />
+        <!-- تم حذف VideoPlayerActivity و VideoActivity هنا -->
 
         <activity
             android:name=".activities.IncludedFoldersActivity"
@@ -213,20 +208,6 @@
                 <data android:host="*" />
                 <data android:pathPattern=".*\\.jxl" />
                 <data android:mimeType="application/octet-stream" />
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".activities.VideoActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data android:mimeType="video/*" />
             </intent-filter>
         </activity>
 
@@ -494,7 +475,7 @@
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_lime"
-            android:roundIcon="@mipmap/ic_launcher_lime"
+            andrid:roundIcon="@mipmap/ic_launcher_lime"
             android:targetActivity=".activities.SplashActivity">
 
             <intent-filter>
@@ -523,7 +504,7 @@
             android:exported="true"
             android:icon="@mipmap/ic_launcher_amber"
             android:roundIcon="@mipmap/ic_launcher_amber"
-            android:targetActivity=".activities.SplashActivity">
+            android:targetActivity.="activities.SplashActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -559,7 +540,7 @@
         </activity-alias>
 
         <activity-alias
-            android:name=".activities.SplashActivity.Brown"
+            android:name=".activities.Splash`Activity.Brown"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/ic_launcher_brown"
@@ -582,22 +563,4 @@
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity-alias>
-
-        <activity-alias
-            android:name=".activities.SplashActivity.Grey_black"
-            android:enabled="false"
-            android:exported="true"
-            android:icon="@mipmap/ic_launcher_grey_black"
-            android:roundIcon="@mipmap/ic_launcher_grey_black"
-            android:targetActivity=".activities.SplashActivity">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity-alias>
-    </application>
-</manifest>
+                <category android:name="android.intent.category.LAUNCHER"
